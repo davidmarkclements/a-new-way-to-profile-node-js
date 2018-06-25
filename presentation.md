@@ -1,20 +1,28 @@
-title: Profiling Asynchronous Activity
+title: A new way to profile Node.js
 layout: true
 class: no-counter
 <!-- This slide will serve as the base layout for all your slides -->
 .bottom-bar[
   <a style="float:left;filter:invert(.5)" href="http://nearform.com"><img src="nearform.svg" alt="nearForm" height="32"></a>
-  <div style='float:right'>
-  <span>MC</span>
-  <span class=em>&</span>
-  <span>DMC</span>
+  <div style='float:right;margin-top:.6em;letter-spacing:.03em'>
+    <div style='font-size:0.6em;line-height:1.2em'>
+      <a href=https://twitter.com/matteocollina>
+        <span class=em>@</span>matteocollina 
+      </a>
+    </div>
+    <div style='font-size:0.6em;line-height:1.1em'>
+      <a href=https://twitter.com/davidmarkclem>
+        <span class=em>@</span>davidmarkclem
+      </a>
+    </div>
   </div>
 ]
 
 ---
 class: splash
+<p style='margin-top:-1em'></p>
+# &nbsp;&thinsp;A .em[NEW] WAY <br>TO PROFILE<br> NODE.em[.]JS
 
-# Profiling .em[Asynchronous] Activity
 <span>Matteo Collina</span>
 <span class=em> & </span>
 <span>David Mark Clements</span>
@@ -64,7 +72,7 @@ class: impact
 
 class: impact
 
-# Why is it slow?
+# .em[Why] is it slow?
 
 ---
 
@@ -103,25 +111,93 @@ class: impact
 
 ---
 
-# Putting 🚀 back on 🐢 
+# Finding Bottlenecks
 
-* Reproduce the scenario on a production simulated environment 
-* Reproduce on a synthetic local environment for rapid iteration
-* Gather profiling data
-* Analyse profiling data to find the bottleneck
-* Mitigate the bottleneck
-* Run the scenario on a patched production simulated environment to verify
+.center[.responsive-v[![](opt-process.png)]]
 
 ---
 
-# Putting 🚀 back on 🐢 
+# Finding Bottlenecks
 
-* Reproduce the scenario on a production simulated environment 
-* Reproduce on a synthetic local environment for rapid iteration
-* **.em[Gather profiling data]**
-* **.em[Analyse profiling data to find the bottleneck]**
-* Mitigate the bottleneck
-* Run the scenario on a patched production simulated environment to verify
+.center[.responsive-v[![](opt-process-diagnostics.png)]]
+
+---
+
+# Diagnostics
+
+[.throb[.center[![](clinic.png)]]](http://github.com/nearform/node-clinic)
+
+
+```sh
+$ npm i -g clinic
+```
+
+---
+
+<a href=http://github.com/nearform/node-clinic style="position:absolute;left:0;top:.5em;width:100%;">
+.center[<img src=clinic.png style="height:9em">] 
+</a>
+<p style="margin-top: 5.5em"></p>
+
+
+.col-4[
+<a href=http://github.com/nearform/node-clinic-doctor>
+.logo[![](doctor.png)]
+## Clinic Doctor 
+</a>
+]
+
+.col-4[
+<span>
+.logo[![](bp.png)] 
+## Clinic Bubbleprof 
+</span>
+]
+
+.col-4[
+<a href=http://github.com/davidmarkclements/0x>
+.logo[![](0x.png)]
+## Clinic Flame 
+</a>
+]
+
+---
+
+# Simulating Load
+
+<div class=logo style='background:rgb(127,127,127);margin-bottom:-1em;height:3.9em;margin-top:0.95em;border: 2px solid #d13787;box-sizing:border-box'>
+<img src=autocannon.png style="max-height:103%;margin-top:-.3em;filter:drop-shadow(0px 0px 24px #ccc);">
+</div>
+
+
+.responsive[![](autocannon-demo.gif)]
+
+
+---
+
+class: impact
+
+<h1 style="margin-top:-.5em">.small[.em[Health] Check]</h1>
+## Clinic Doctor
+<a href=http://github.com/nearform/node-clinic-doctor>
+.logo[![](doctor.png)]
+</a>
+
+<h2 style="width: 28.5rem;margin: 0 auto;margin-top: -.5em"> 
+Applies .em[heuristics] <br>to assess the .em[health] of a Node.js process under .em[load] 
+</h2>
+
+---
+
+class: impact
+
+# .em[Live] Hack
+
+.logo[![](doctor.png)]
+
+.tight[
+## Demonstrating how to check the .em[health] of a Node.js application using .em[Clinic Doctor]
+]
 
 ---
 
@@ -140,9 +216,6 @@ class: impact
 ## .center[|]
 ## .center[|]
 ## .center[|]
-<code style="padding:.25em;position:absolute;margin-left:-4.5em;margin-top:-2.8em">
-npm i -g clinic
-</code>
 ## .center[|]
 ## .center[|]
 ]
@@ -155,57 +228,104 @@ npm i -g clinic
 
 ---
 
+class: impact
+
 # Clinic Flame
-
 .logo[![](0x.png)]
+## Collects data by .em[CPU sampling]
+## Tracks .em[top-of-stack] frequency
+## Creates .em[flame graphs]
 
-* Captures and aggregates call stacks via CPU sampling
-* Identifies .em[hot] functions by tracking top-of-stack frequency
-* Visualizes call stacks and function heat using a .em[Flamegraph] visualization
-* Supports all platforms that Node runs on 
-* The core of clinic flame is [0x](http://npm.im/0x)
+
+---
+
+# .em[Flame] graphs
+
+.center[.responsive-v[![](0x-demo.png)]]
 
 ---
 
 class: impact
 
-```sh
-$ clinic flame -- node server.js
-```
-
+# .em[Live] Hack
 
 .logo[![](0x.png)]
 
-## Diagnose an .em[internal bottleneck]
-## by profiling .em[synchronous] activity
-## using .em[Clinic Flame]
+.tight[
+## Diagnosing an .em[internal bottleneck] by profiling .em[synchronous] activity using .em[Clinic Flame] 
+]
 
 ---
+
+class: impact
+
+<h1 style="margin-bottom:.65em;margin-top:-.45em"> .small[.em[Latency] domino effect] </h1>
+
+.solid[
+  # High CPU spikes .em[may] indicate <br> an .em[external] bottleneck in <br> high .em[latency] scenarios
+]
+
+---
+
+class: impact
+
+<h1 style="margin-bottom:.45em;margin-top:-.2em"> .small[.em[Latency] domino effect] </h1>
+
+.solid[
+  # The event loop is a<br> .em[shared resource].<br> I/O occurs .em[concurrently],<br> .em[not] on parallel threads
+]
+
+---
+
+class: impact
+
+<h1 style="margin-bottom:.65em;margin-top:-.45em"> .small[.em[Latency] domino effect] </h1>
+
+.solid[
+  # Long delays lead to a .em[build up] of .em[I/O] handles, which increases .em[memory] usage
+]
+
+---
+
+class: impact
+
+<h1 style="margin-bottom:.65em;margin-top:-.45em"> .small[.em[Latency] domino effect] </h1>
+ 
+.solid[
+  # This puts the .em[Garbage Collector] under pressure, causing higher, prolonged .em[CPU spikes].
+]  
+
+---
+
+class: impact
 
 # Clinic Bubbleprof
 
 .logo[![](bp.png)]
 
-* Collects time spent waiting for callbacks to trigger using .em[async_hooks]
-* Aggregates, groups and categorizes profiling data by operation and type and library 
-* Visualizes how much asynchronous time libraries use and operational flow latency using a .em[Bubblegraph] visualization
-* Supports all platforms that Node runs on 
+## Collects data using .em[async_hooks]
+## Tracks .em[latency] between operations
+## Creates .em[bubble graphs]
+
+
+
+---
+
+# Bubble Graphs
+
+.center[.responsive-v[![](bp-demo.png)]]
 
 ---
 
 class: impact
 
-
-```sh
-$ clinic bubble -- node server.js
-```
+# .em[Live] Hack
 
 .logo[![](bp.png)]
 
-## Diagnose an .em[external bottleneck]
-## by profiling .em[asynchronous] activity
-## using .em[Clinic Bubbleprof]
-
+.tight[
+## Diagnosing an .em[external bottleneck] by profiling .em[asynchronous] activity using .em[Clinic Bubbleprof] 
+]
 
 ---
 
@@ -221,15 +341,6 @@ $ clinic bubble -- node server.js
 class: impact
 
 # Parting Words
-
----
-
-# The high latency domino effect
-
-* High CPU spikes .em[may] indicate an .em[external] bottleneck in high latency scenarios
-* The event loop is a shared resource - I/O happens .em[concurrently] **not** on parallel threads
-* High latency leads to a build up of I/O handles, which increases memory usage
-* This puts the GC under pressure, which is forced to use more CPU cycles  
 
 ---
 
@@ -285,7 +396,7 @@ class: impact
 class: splash
 
 # .em[Talk] to us!
-## [.em[@]mcollina](https://twitter.com/mcollina) 
+## [.em[@]matteocollina](https://twitter.com/matteocollina) 
 ## [.em[@]davidmarkclem](https://twitter.com/davidmarkclem)
 <span>Matteo Collina</span>
 <span class=em> & </span>
