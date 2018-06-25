@@ -135,7 +135,7 @@ $ npm i -g clinic
 ---
 
 <a href=http://github.com/nearform/node-clinic style="position:absolute;left:0;top:.5em;width:100%;">
-.center[<img src=clinic.png style="height:9em">] 
+.center[.clinic[![](clinic.png)]] 
 </a>
 <p style="margin-top: 5.5em"></p>
 
@@ -166,7 +166,7 @@ $ npm i -g clinic
 # Simulating Load
 
 <div class=logo style='background:rgb(127,127,127);margin-bottom:-1em;height:3.9em;margin-top:0.95em;border: 2px solid #d13787;box-sizing:border-box'>
-<img src=autocannon.png style="max-height:103%;margin-top:-.3em;filter:drop-shadow(0px 0px 24px #ccc);">
+  .autocannon[![](autocannon.png)]
 </div>
 
 
@@ -330,7 +330,7 @@ class: impact
 ---
 
 .center[
-  <img src=shaggy.gif>
+  ![](shaggy.gif)
 ]
 
 # 🙌
