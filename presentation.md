@@ -30,14 +30,13 @@ class: splash
 
 ---
 
-class: impact
 
 # Performance
 
 
 ---
 
-class: impact
+class: splash, perfromance
 
 # Perf.em[r]omance
 
@@ -335,6 +334,14 @@ class: impact
 
 # 🙌
 
+
+---
+
+class: impact
+
+<h1 style='margin-top:-0.25em'>The .em[Team]</h1>
+
+.team[![](clinic-team.jpg)]
 
 ---
 
