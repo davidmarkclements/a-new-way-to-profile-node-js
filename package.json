@@ -1,0 +1,25 @@
+{
+  "name": "a-new-way-to-profile-node-js",
+  "version": "1.0.0",
+  "description": "## Abstract",
+  "main": "index.js",
+  "scripts": {
+    "start": "bs s",
+    "html": "bs e",
+    "pdf": "bs p"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/davidmarkclements/a-new-way-to-profile-node-js.git"
+  },
+  "keywords": [],
+  "author": "David Mark Clements",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/davidmarkclements/a-new-way-to-profile-node-js/issues"
+  },
+  "homepage": "https://github.com/davidmarkclements/a-new-way-to-profile-node-js#readme",
+  "dependencies": {
+    "backslide": "^2.3.0"
+  }
+}

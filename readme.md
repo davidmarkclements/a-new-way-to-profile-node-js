@@ -11,3 +11,21 @@ parts of the application dependent on the service are experiencing intermittent
 slowdowns or in some cases, complete unavailability. What are you going to do now?
 In this talk we'll present a new and straightforward way to identify bottlenecks
 in Node.js and beyond. 
+
+## Present
+
+```sh 
+npm start
+```
+
+## Export HTML
+
+```sh 
+npm run html
+```
+
+## Export PDF 
+
+```
+npm run pdf  
+```
