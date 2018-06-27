@@ -189,9 +189,15 @@ class: impact
 .logo[![](doctor.png)]
 </a>
 
-<h2 style="width: 28.5rem;margin: 0 auto;margin-top: -.5em"> 
-Applies .em[heuristics] <br>to assess the .em[health] of a Node.js process under .em[load] 
-</h2>
+## Collects metrics by .em[injecting probes]
+## Assesses health with .em[heuristics]
+## Creates .em[recommendations]
+
+---
+
+class: impact
+
+DOCTOR SCREENSHOT HERE
 
 
 ---
@@ -200,7 +206,7 @@ class: impact
 
 # Clinic Flame
 .logo[![](0x.png)]
-## Collects data by .em[CPU sampling]
+## Collects metrics by .em[CPU sampling]
 ## Tracks .em[top-of-stack] frequency
 ## Creates .em[flame graphs]
 
@@ -220,7 +226,7 @@ class: impact
 
 .logo[![](bp.png)]
 
-## Collects data using .em[async_hooks]
+## Collects metrics using .em[async_hooks]
 ## Tracks .em[latency] between operations
 ## Creates .em[bubble graphs]
 
@@ -318,15 +324,6 @@ class: impact
 
 > The application should have a response time of 200ms or less in the 99th percentile at 100 concurrent requests per server.
 
-
----
-
-# Beware of the rabbit hole
-
-* It is not uncommon for .em[80%] of effort to be in the final .em[20%] of optimization work
-* Find out what .em[fast enough] is for your given business context
-* Remember to .em[balance the cost] of your time against savings and other business gains
-
 ---
 
 class: impact
@@ -356,11 +353,24 @@ class: impact
 .col-5[
 ## Fastify
 <a href='http://fastify.io'>
-.logo[![](fastify.png)]
+.fastify[.logo[![](fastify.png)]]
 </a>
 ## High speed .em[web] framework
 ]
 
+---
+
+# Beware of the rabbit hole
+
+* It is not uncommon for .em[80%] of effort to be in the final .em[20%] of optimization work
+* Find out what .em[fast enough] is for your given business context
+* Remember to .em[balance the cost] of your time against savings and other business gains
+
+---
+
+# You don't .em[always] have to reach..
+
+.center[.responsive-v[![](ludicrous.gif)]]
 
 ---
 class: splash

@@ -266,4 +266,9 @@ pre {
   height: 9em
 }
 
+.fastify img {
+  filter: invert(1)
+}
+
+
 .team > img { width: auto; height: 50vh; };
