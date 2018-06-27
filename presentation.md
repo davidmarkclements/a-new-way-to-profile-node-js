@@ -77,14 +77,20 @@ class: impact
 
 class: impact
 
+# because .em[bottleneck]
+
+---
+
+class: impact
+
 # Why is it slow?
 
 <p style='padding: .1em'></p>
 .col-5[
-## Your Node.js process 
-## is on .em[fire]
-<br>
 ## The bottleneck is .em[internal]
+<br>
+## The Node.js process
+## is on fire
 ]
 
 .col-2[
@@ -96,10 +102,10 @@ class: impact
 ]
 
 .col-5[
-## It's .em[not]...
-## something else is
-<br>
 ## The bottleneck is .em[external]
+<br>
+## Something else
+## is on fire
 ]
 
 ---
@@ -113,6 +119,18 @@ class: impact
 # Finding Bottlenecks
 
 .center[.responsive-v[![](opt-process.png)]]
+
+
+---
+
+# Simulating Load
+
+<div class=logo style='background:rgb(127,127,127);margin-bottom:-1em;height:3.9em;margin-top:0.95em;border: 2px solid #d13787;box-sizing:border-box'>
+  .autocannon[![](autocannon.png)]
+</div>
+
+
+.responsive[![](autocannon-demo.gif)]
 
 ---
 
@@ -160,24 +178,12 @@ $ npm i -g clinic
 </a>
 ]
 
----
-
-# Simulating Load
-
-<div class=logo style='background:rgb(127,127,127);margin-bottom:-1em;height:3.9em;margin-top:0.95em;border: 2px solid #d13787;box-sizing:border-box'>
-  .autocannon[![](autocannon.png)]
-</div>
-
-
-.responsive[![](autocannon-demo.gif)]
-
 
 ---
 
 class: impact
 
-<h1 style="margin-top:-.5em">.small[.em[Health] Check]</h1>
-## Clinic Doctor
+# Clinic Doctor
 <a href=http://github.com/nearform/node-clinic-doctor>
 .logo[![](doctor.png)]
 </a>
@@ -186,44 +192,6 @@ class: impact
 Applies .em[heuristics] <br>to assess the .em[health] of a Node.js process under .em[load] 
 </h2>
 
----
-
-class: impact
-
-# .em[Live] Hack
-
-.logo[![](doctor.png)]
-
-.tight[
-## Demonstrating how to check the .em[health] of a Node.js application using .em[Clinic Doctor]
-]
-
----
-
-class: impact
-<p style="margin-top:-2em"></p>
-# Profiling Node.js
-<p style="padding:.1em"></p>
-.col-5[
-## Clinic Flame
-.logo[![](0x.png)]
-## Identifies .em[internal] bottlenecks
-
-]
-
-.col-2[
-## .center[|]
-## .center[|]
-## .center[|]
-## .center[|]
-## .center[|]
-]
-
-.col-5[
-## Clinic Bubbleprof
-.logo[![](bp.png)]
-## Identifies .em[external] bottlenecks
-]
 
 ---
 
@@ -242,57 +210,6 @@ class: impact
 
 .center[.responsive-v[![](0x-demo.png)]]
 
----
-
-class: impact
-
-# .em[Live] Hack
-
-.logo[![](0x.png)]
-
-.tight[
-## Diagnosing an .em[internal bottleneck] by profiling .em[synchronous] activity using .em[Clinic Flame] 
-]
-
----
-
-class: impact
-
-<h1 style="margin-bottom:.65em;margin-top:-.45em"> .small[.em[Latency] domino effect] </h1>
-
-.solid[
-  # High CPU spikes .em[may] indicate <br> an .em[external] bottleneck in <br> high .em[latency] scenarios
-]
-
----
-
-class: impact
-
-<h1 style="margin-bottom:.45em;margin-top:-.2em"> .small[.em[Latency] domino effect] </h1>
-
-.solid[
-  # The event loop is a<br> .em[shared resource].<br> I/O occurs .em[concurrently],<br> .em[not] on parallel threads
-]
-
----
-
-class: impact
-
-<h1 style="margin-bottom:.65em;margin-top:-.45em"> .small[.em[Latency] domino effect] </h1>
-
-.solid[
-  # Long delays lead to a .em[build up] of .em[I/O] handles, which increases .em[memory] usage
-]
-
----
-
-class: impact
-
-<h1 style="margin-bottom:.65em;margin-top:-.45em"> .small[.em[Latency] domino effect] </h1>
- 
-.solid[
-  # This puts the .em[Garbage Collector] under pressure, causing higher, prolonged .em[CPU spikes].
-]  
 
 ---
 
@@ -306,13 +223,47 @@ class: impact
 ## Tracks .em[latency] between operations
 ## Creates .em[bubble graphs]
 
+---
+
+# Bubble graphs
+
+.center[.responsive-v[![](bp-demo.png)]]
 
 
 ---
 
-# Bubble Graphs
+class: impact
 
-.center[.responsive-v[![](bp-demo.png)]]
+<a href=http://github.com/nearform/node-clinic-doctor>
+.logo[![](doctor.png)]
+</a>
+# .em[Where] is the bottleneck?
+
+---
+
+<p style="margin-top:-2em"></p>
+<p style="padding:.1em"></p>
+.col-5[
+## Clinic Flame
+.logo[![](0x.png)]
+## For .em[internal] bottlenecks
+
+]
+
+.col-2[
+## .center[|]
+## .center[|]
+## .center[|]
+## .center[|]
+## .center[|]
+]
+
+.col-5[
+## Clinic Bubbleprof
+.logo[![](bp.png)]
+## For .em[external] bottlenecks
+]
+
 
 ---
 
@@ -320,19 +271,30 @@ class: impact
 
 # .em[Live] Hack
 
-.logo[![](bp.png)]
-
-.tight[
-## Diagnosing an .em[external bottleneck] by profiling .em[asynchronous] activity using .em[Clinic Bubbleprof] 
+.col-4[
+<a href=http://github.com/nearform/node-clinic-doctor>
+.logo[![](doctor.png)]
+</a>
 ]
+
+.col-4[
+<span>
+.logo[![](bp.png)] 
+</span>
+]
+
+.col-4[
+<a href=http://github.com/davidmarkclements/0x>
+.logo[![](0x.png)]
+</a>
+]
+
 
 ---
 
 .center[
   ![](shaggy.gif)
 ]
-
-# 🙌
 
 
 ---
