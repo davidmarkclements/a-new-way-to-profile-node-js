@@ -30,13 +30,14 @@ class: splash
 
 ---
 
+class: impact 
 
 # Performance
 
 
 ---
 
-class: splash, perfromance
+class: impact, perfromance
 
 # Perf.em[r]omance
 
