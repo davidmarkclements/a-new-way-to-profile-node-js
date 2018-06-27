@@ -1,0 +1,24 @@
+{
+  "name": "bubbleprof-example",
+  "version": "1.0.0",
+  "description": "A bubbleprof example",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nearform/bubbleprof-example.git"
+  },
+  "author": "Mathias Buus (@mafintosh)",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/nearform/bubbleprof-example/issues"
+  },
+  "homepage": "https://github.com/nearform/bubbleprof-example#readme",
+  "dependencies": {
+    "fastify": "^1.5.0",
+    "lru": "^3.1.0",
+    "mongojs": "^2.5.0",
+    "ndjson": "^1.5.0",
+    "pump": "^3.0.0",
+    "simple-get": "^3.0.2",
+    "stream-each": "^1.2.2"
+  }
+}
