@@ -297,7 +297,10 @@ class: impact
 .logo[![](0x.png)]
 </a>
 ]
-
+.col-12[
+  <p style="margin-top:1em"></p>
+  ## .em[Interact:] <u><http://goo.gl/abcdef></u>
+]
 
 ---
 
@@ -373,6 +376,7 @@ class: impact
 # You don't .em[always] have to reach..
 
 .center[.responsive-v[![](ludicrous.gif)]]
+
 
 ---
 class: splash
