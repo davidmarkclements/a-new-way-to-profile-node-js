@@ -24,7 +24,7 @@ app.get('/', function (req, reply) {
 
 function computeMagic (a, b) {
   const hash = createHash('sha512')
-  for (var i = 0; i < 100; i++) {
+  for (var i = 0; i < 1000; i++) {
     hash.update(JSON.stringify(a))
     hash.update(JSON.stringify(b))
   }
