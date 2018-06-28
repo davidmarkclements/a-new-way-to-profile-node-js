@@ -299,7 +299,7 @@ class: impact
 ]
 .col-12[
   <p style="margin-top:1em"></p>
-  ## .em[Interact:] <u><http://goo.gl/abcdef></u>
+  ## .em[Interact:] <u><http://nf.ie/interact></u>
 ]
 
 ---
