@@ -194,7 +194,12 @@ pre {
 .small { font-size: .8em; }
 .solid { line-height:4.9rem; & > h1 {font-size: 4.5rem;} }
 .dark-bg { background-color: $dark; }
-.alt-bg { background-color: $secondary; };
+.alt-bg { background-color: $secondary; }
+
+
+.outline-img img {
+  outline: 1px solid $tertiary
+}
 
 // Simple 12-columns grid system
 .row {

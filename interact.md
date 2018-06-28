@@ -38,7 +38,7 @@ class: impact
 ]
 
 .col-4[
-[.logo[![](0x.png)]](flame-demo.html)
+[.logo[![](flame.png)]](flame-demo.html)
 ## [View](flame-demo.html)
 ]
 

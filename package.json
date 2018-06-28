@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "bs s",
-    "html": "bs e",
+    "html": "bs e && cp *-demo.html dist && mv dist/presentation.html dist/index.html && rm dist/readme.html",
     "pdf": "bs p"
   },
   "repository": {

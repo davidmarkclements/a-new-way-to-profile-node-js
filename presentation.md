@@ -174,7 +174,7 @@ $ npm i -g clinic
 
 .col-4[
 <a href=http://github.com/davidmarkclements/0x>
-.logo[![](0x.png)]
+.logo[![](flame.png)]
 ## Clinic Flame 
 </a>
 ]
@@ -207,7 +207,7 @@ class: impact
 class: impact
 
 # Clinic Flame
-.logo[![](0x.png)]
+.logo[![](flame.png)]
 ## Collects metrics by .em[CPU sampling]
 ## Tracks .em[top-of-stack] frequency
 ## Creates .em[flame graphs]
@@ -217,7 +217,7 @@ class: impact
 
 # .em[Flame] graphs
 
-.center[.responsive-v[![](flame.png)]]
+.outline-img[.center[.responsive-v[![](flamegraph.png)]]]
 
 
 ---
@@ -236,7 +236,7 @@ class: impact
 
 # Bubble graphs
 
-.center[.responsive-v[![](bubble.png)]]
+.outline-img[.center[.responsive-v[![](bubble.png)]]]
 
 
 ---
@@ -254,7 +254,7 @@ class: impact
 <p style="padding:.1em"></p>
 .col-5[
 ## Clinic Flame
-.logo[![](0x.png)]
+.logo[![](flame.png)]
 ## For .em[internal] bottlenecks
 
 ]
@@ -294,7 +294,7 @@ class: impact
 
 .col-4[
 <a href=http://github.com/davidmarkclements/0x>
-.logo[![](0x.png)]
+.logo[![](flame.png)]
 </a>
 ]
 .col-12[
