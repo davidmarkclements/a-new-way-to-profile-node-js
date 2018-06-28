@@ -29,17 +29,17 @@ class: impact
 
 .col-4[
 [.logo[![](doctor.png)]](doctor-demo.html)
-## [View](doctor-demo.html)
+## [View](http://davidmarkclements.github.io/a-new-way-to-profile-node-js/doctor-demo.html)
 ]
 
 .col-4[
 [.logo[![](bp.png)]](bubbleprof-demo.html)
-## [View](bubbleprof-demo.html)
+## [View](http://davidmarkclements.github.io/a-new-way-to-profile-node-js/bubbleprof-demo.html)
 ]
 
 .col-4[
 [.logo[![](flame.png)]](flame-demo.html)
-## [View](flame-demo.html)
+## [View](http://davidmarkclements.github.io/a-new-way-to-profile-node-js/flame-demo.html)
 ]
 
 .col-12[

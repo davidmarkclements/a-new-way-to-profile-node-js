@@ -159,7 +159,7 @@ class: impact
 
 
 ```sh
-$ npm i -g clinic
+$ npm install -g clinic
 ```
 
 ---
@@ -211,7 +211,7 @@ class: impact
 
 # .em[Doctor] metrics
 
-.center[.responsive-v[![](doctor-example.png)]]
+.outline-img[.center[.responsive-v[![](doctor-example.png)]]]
 
 
 ---
