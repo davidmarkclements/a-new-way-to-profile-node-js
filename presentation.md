@@ -197,7 +197,9 @@ class: impact
 
 class: impact
 
-DOCTOR SCREENSHOT HERE
+# .em[Doctor] metrics
+
+.center[.responsive-v[![](doctor-example.png)]]
 
 
 ---
@@ -215,7 +217,7 @@ class: impact
 
 # .em[Flame] graphs
 
-.center[.responsive-v[![](0x-demo.png)]]
+.center[.responsive-v[![](flame.png)]]
 
 
 ---
@@ -234,7 +236,7 @@ class: impact
 
 # Bubble graphs
 
-.center[.responsive-v[![](bp-demo.png)]]
+.center[.responsive-v[![](bubble.png)]]
 
 
 ---
