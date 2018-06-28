@@ -387,4 +387,13 @@ class: splash
 <span>Matteo Collina</span>
 <span class=em> & </span>
 <span>David Mark Clements</span>
-<a style="filter:invert(.125);display:block;width:10em;margin-left:auto;margin-right:auto;padding-top:.8em;margin-top:3.2em;margin-bottom:-2.5em" href="http://nearform.com"><img src="nearform.svg" alt="nearForm" height="52"></a>
+
+<p style="margin-top:2em"></p>
+
+.center[
+  <h3 style='color:white;margin-bottom:0.1em'>Let us .em[know] your .em[thoughts]</h3>
+  #### <u><https://nf.ie/BPFB></u>
+]
+
+
+<a style="filter:invert(.125);display:block;width:10em;margin-left:auto;margin-right:auto;padding-top:.8em;margin-top:1.7em;margin-bottom:-2.5em" href="http://nearform.com"><img src="nearform.svg" alt="nearForm" height="52"></a>
