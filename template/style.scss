@@ -67,7 +67,7 @@ pre {
 // ---------------------------------------------------------------------------
 
 .remark-code { font-size: .9em; }
-.remark-container { background: $dark; }
+.remark-container { background: $primary; }
 .remark-slide-scaler { box-shadow: none; }
 .remark-notes { font-size: 1.5em; }
 
@@ -154,8 +154,8 @@ pre {
 .tight { max-width: 18em; margin: 0 auto }
 
 // Images
-.responsive > img { width: 100%; height: auto; };
-.responsive-v > img { width: auto; height: 70vh; };
+.responsive > img { width: 100%; height: auto; }
+.responsive-v > img { width: auto; height: 30rem; }
 .contain { background-size: contain; };
 .overlay { box-shadow: inset 0 0 0 9999px $overlay; }
 .logo { text-align: center; display: block; }
