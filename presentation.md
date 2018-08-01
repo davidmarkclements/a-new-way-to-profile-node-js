@@ -20,6 +20,7 @@ class: splash
 
 <span>David Mark Clements</span>
 <a style="border-top:2px solid #d13787;filter:invert(.125);display:block;width:10em;margin-left:auto;margin-right:auto;padding-top:.4em;margin-top:1.3em;margin-bottom:-2.5em" href="http://nearform.com"><img src="nearform.svg" alt="nearForm" height="52"></a>
+### <u style='display:block;margin-top:2.2em;'><http://nf.ie/a-new-way-dot-mjs></u>
 
 ---
 class: impact
